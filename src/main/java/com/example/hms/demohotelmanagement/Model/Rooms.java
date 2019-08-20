@@ -18,16 +18,11 @@ public class Rooms {
     private RoomType roomType;
     @Enumerated(EnumType.STRING)
     private RoomStatus roomStatus;
-    @ManyToOne
-    private Promotions promotions;
-    @ManyToOne
-    private Booking booking;
 
-    public Rooms(String roomsNumber, RoomType roomType, RoomStatus roomStatus, Promotions promotions, Booking booking) {
+
+    public Rooms(String roomsNumber, RoomType roomType, RoomStatus roomStatus) {
         this.roomsNumber = roomsNumber;
         this.roomType = roomType;
         this.roomStatus = roomStatus;
-        this.promotions = promotions;
-        this.booking = booking;
     }
 }
